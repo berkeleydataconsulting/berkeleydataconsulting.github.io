@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+
+/* Hide scrollbar */
+body {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+body::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+.fullscreen-container {
+    height: 100vh; 
+    width: 100%;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    
+}
+
+div#logo-container {
+    background-color: black;
+    align-items: center;
+}
+
+img#logo {
+    margin: auto auto;
+    width: 700px;
+    display: block;
+}
+
+div.fullscreen-container p {
+    margin: 30px 10%;
+}
