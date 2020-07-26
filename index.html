@@ -1,24 +1,77 @@
 <!doctype html>
 <html>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173594867-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-173594867-1');
+    </script>
+
     <head>
         <title>Bekerley Data Conulting</title>
         <link rel="stylesheet" href="assets/stylesheets/style.css">
+        <link rel="icon" type="image/png" href="assets/images/favicon.png">
+        <script type="text/javascript" src="assets/javascript/jquery-3.5.1.min.js"></script>
     </head>
     <body>
         
-        <div class="fullscreen-container" id="logo-container">
+        <div class="main-container fullscreen-container" id="logo-container">
             <img src="assets/images/logo.png" alt="Berkeley Data Consulting" id="logo">
+            <div class="down-arrow-container">
+                <a id="first-down-arrow">
+                    <i class="down-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="100" height="100">
+                            <path fill-rule="evenodd" d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"></path>
+                        </svg>
+                    </i>
+                </a>
+            </div>
         </div>
 
-        <div class="fullscreen-container">
+        <div class="main-container fullscreen-container" id="background">
 
-            <p>We leverage a powerful combination of data science, economics, and engineering to deliver scalable data-driven insights that power business decisions. Our expertise in analytics, modeling, and infrastructure development allows us to deliver innovative solutions that help our clients harness the potential of data.</p>
+            <div style="margin-top: 15%;">
 
-            <p>We originally came together to create UC Berkeley’s first course that applies data science techniques to economic concepts, through which we’ve now taught more than 100 students. While working closely to create this popular course, we realized that we share a passion for leveraging data science to solve key problems in various domains.</p>
+                <h1>Berkeley Data Consulting</h1>
 
-            <p>Now, we use our combined experience from industry to provide valuable solutions for organizations.</p>
+                <p class="paragraph">We leverage a powerful combination of data science, economics, and engineering to deliver scalable data-driven insights that power business decisions. Our expertise in analytics, modeling, and infrastructure development allows us to deliver innovative solutions that help our clients harness the potential of data.</p>
 
+                <p class="paragraph">We originally came together to create UC Berkeley’s first course that applies data science techniques to economic concepts, through which we’ve now taught more than 100 students. While working closely to create this popular course, we realized that we share a passion for leveraging data science to solve key problems in various domains.</p>
+
+                <p class="paragraph">Now, we use our combined experience from industry to provide valuable solutions for organizations.</p>
+
+            </div>
+
+            <div class="down-arrow-container">
+                <a id="second-down-arrow">
+                    <i class="down-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="100" height="100">
+                            <path fill-rule="evenodd" d="M12.78 6.22a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06 0L3.22 7.28a.75.75 0 011.06-1.06L8 9.94l3.72-3.72a.75.75 0 011.06 0z"></path>
+                        </svg>
+                    </i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="main-container fullscreen-container">
+            
         </div>
 
     </body>
+
+    <script>
+        $("[id$=-down-arrow]").hide().fadeIn(2000);
+        $(document).ready(function (){
+            $("[id$=-down-arrow]").click(function (){
+                $('html, body').animate({
+                    scrollTop: $(this).parents("div.main-container").next().offset().top
+                }, 1000);
+            });
+        });
+        
+    </script>
 </html>

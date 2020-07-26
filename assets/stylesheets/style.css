@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+* {
+    font-family: 'Public Sans', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
 body {
     margin: 0;
 }
@@ -19,13 +25,48 @@ body::-webkit-scrollbar { /* WebKit */
     width: 100%;
     display: flex; 
     flex-direction: column; 
-    justify-content: center; 
-    
+    justify-content: space-between;
+}
+
+div.down-arrow-container {
+    /* keeps down arrows at the bottom center of their parent */
+    margin: 0 auto 20px auto;
+    /* justify-self: flex-end; */
+    align-self: center;
+    display: inline-flex;
+}
+
+div.main-container:nth-of-type(2n+1) i.down-arrow svg {
+    fill: #fff;
+    margin: 0 auto;
+}
+
+div.main-container:nth-of-type(2n) i.down-arrow svg {
+    fill: #000;
+    margin: 0 auto;
+}
+
+i.down-arrow {
+    opacity: 0.3;
+    /* display: inline-flex; */
+    bottom: 0;
+}
+
+i.down-arrow:hover {
+    opacity: 1;
 }
 
 div#logo-container {
-    background-color: black;
+    background-color: #000;
     align-items: center;
+}
+
+div.main-container:nth-of-type(2n) {
+    background-color: #eee;
+}
+
+div.main-container:nth-of-type(2n+1) {
+    background-color: #000;
 }
 
 img#logo {
@@ -34,6 +75,11 @@ img#logo {
     display: block;
 }
 
-div.fullscreen-container p {
+div.fullscreen-container p, div.fullscreen-container h1 {
     margin: 30px 10%;
+}
+
+p.paragraph {
+    font-size: 20px;
+    /* flex-grow: 1; */
 }
