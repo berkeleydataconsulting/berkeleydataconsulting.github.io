@@ -79,10 +79,10 @@ div.fullscreen-container p, div.fullscreen-container h1 {
 
 div.fullscreen-container h1 {
     text-align: center;
-    font-size: 45px;
+    font-size: 55px;
     font-weight: 300;
     margin-bottom: 60px;
-    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Noto Sans JP', 'Public Sans', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     letter-spacing: 5px;
 }
 
