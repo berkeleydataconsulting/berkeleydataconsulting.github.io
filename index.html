@@ -13,18 +13,25 @@
 
         <title>Berkeley Data Conulting</title>
 
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&family=Public+Sans:wght@200;300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/slick/slick.css">
         <link rel="stylesheet" href="assets/stylesheets/style.css">
         <link rel="icon" type="image/png" href="assets/images/favicon.png">
         
         <script type="text/javascript" src="assets/javascript/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/core.js"></script>
         
     </head>
 
     <body>
         
         <div class="main-container fullscreen-container" id="logo-container">
-            <img src="assets/images/logo.png" alt="Berkeley Data Consulting" id="logo">
+
+            <div class="main-content">
+                <img src="assets/images/logo.png" alt="Berkeley Data Consulting" id="logo">
+            </div>
+
             <div class="down-arrow-container">
                 <a id="first-down-arrow">
                     <i class="down-arrow">
@@ -34,11 +41,12 @@
                     </i>
                 </a>
             </div>
+
         </div>
 
         <div class="main-container fullscreen-container" id="background">
 
-            <div style="margin-top: 11%;">
+            <div class="main-content">
 
                 <h1>Berkeley Data Consulting</h1>
 
@@ -64,9 +72,73 @@
 
         <div class="main-container fullscreen-container">
 
-            <h2>Consultants</h2>
+            <h2>About Us</h2>
             
-            <div class="biographies-container">
+            <div class="biographies-container carouel" id="bio-carousel">
+
+                <div class="bio-container">
+
+                    <div class="headshot-container">
+                        <img src="assets/images/headshots/amal.jpg" alt="Amal Bhatnagar" class="headshot" />
+                    </div>
+
+                    <div class="bio-text-container">
+
+                        <h3>Amal Bhatnagar</h3>
+
+                        <p>Amal is a senior studying data science and economics. He has led graduate and undergraduate students in classification projects at Trace Data, a data security startup backed by Accel and Kleiner Perkins, where he developed classification algorithms to protect employee information. He worked with Indeed to improve its California job prediction model. Amal has also worked on machine learning and business intelligence teams at KPMG and BIP Capital, Atlanta’s most active venture capital firm. He specializes in natural language processing and M&A.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="bio-container">
+
+                    <div class="headshot-container">
+                        <img src="assets/images/headshots/alan.jpg" alt="Alan Liang" class="headshot" />
+                    </div>
+
+                    <div class="bio-text-container">
+
+                        <h3>Alan Liang</h3>
+
+                        <p>Alan is a CS masters student who recently completed his undergraduate degree in CS and economics. He has interned as a data scientist, program manager, and software engineer at established firms like Microsoft and Boston Consulting Group and dynamic startups like QuantCo and Seele. Alan has worked on many industry projects at the intersection of data science and engineering, including client cases in pricing and personalization. At Cal, Alan leads a 20-student team at CDSS in external data science education.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="bio-container">
+
+                    <div class="headshot-container">
+                        <img src="assets/images/headshots/chris.jpg" alt="Christopher Pyles" class="headshot" />
+                    </div>
+
+                    <div class="bio-text-container">
+
+                        <h3>Christopher Pyles</h3>
+
+                        <p>Christopher is currently a senior studying CS and data science with an emphasis in business analytics. He worked at the Federal Reserve Bank of San Francisco, where he developed a business automation solution for high volume, high frequency data. Christopher is the lead developer on a team of eight at CDSS that develops software for data science pedagogy. He also works as an undergraduate instructor and manages student cloud computing environments and grading infrastructure.</p>
+
+                    </div>
+
+                </div>
+
+                <!-- <div class="bio-container">
+
+                    <div class="headshot-container">
+                        <img src="assets/images/headshots/andrei.jpg" alt="Andrei Caprau" class="headshot" />
+                    </div>
+
+                    <div class="bio-text-container">
+
+                        <h3>Andrei Caprau</h3>
+
+                        <p>Andrei is a senior completing a triple major in data science, economics, and CS. Interested in the intersection and applications of these fields, he has worked on industry and academic projects including modeling and forecasting job openings and growth, building a predictive model for Berkeley administrators to classify students at risk of not declaring a major on-time, and analyzing data for economics research projects involving trade and tax policy. Additionally, he taught Berkeley’s largest econometrics class as an undergraduate instructor.</p>
+
+                    </div>
+
+                </div> -->
 
                 <div class="bio-container">
 
@@ -83,78 +155,14 @@
                     </div>
 
                 </div>
-                
-            </div>
-
-            <div class="bio-container">
-
-                <div class="headshot-container">
-                    <img src="assets/images/headshots/amal.jpg" alt="Amal Bhatnagar" class="headshot" />
-                </div>
-
-                <div class="bio-text-container">
-
-                    <h3>Amal Bhatnagar</h3>
-
-                    <p>Amal is a senior studying data science and economics. He has led graduate and undergraduate students in classification projects at Trace Data, a data security startup backed by Accel and Kleiner Perkins, where he developed classification algorithms to protect employee information. He worked with Indeed to improve its California job prediction model. Amal has also worked on machine learning and business intelligence teams at KPMG and BIP Capital, Atlanta’s most active venture capital firm. He specializes in natural language processing and M&A.</p>
-
-                </div>
-
-            </div>
-
-            <div class="bio-container">
-
-                <div class="headshot-container">
-                    <img src="assets/images/headshots/chris.jpg" alt="Christopher Pyles" class="headshot" />
-                </div>
-
-                <div class="bio-text-container">
-
-                    <h3>Christopher Pyles</h3>
-
-                    <p>Christopher is currently a senior studying CS and data science with an emphasis in business analytics. He worked at the Federal Reserve Bank of San Francisco, where he developed a business automation solution for high volume, high frequency data. Christopher is the lead developer on a team of eight at CDSS that develops software for data science pedagogy. He also works as an undergraduate instructor and manages student cloud computing environments and grading infrastructure.</p>
-
-                </div>
-
-            </div>
-
-            <div class="bio-container">
-
-                <div class="headshot-container">
-                    <img src="assets/images/headshots/alan.jpg" alt="Alan Liang" class="headshot" />
-                </div>
-
-                <div class="bio-text-container">
-
-                    <h3>Alan Liang</h3>
-
-                    <p>Alan is a CS masters student who recently completed his undergraduate degree in CS and economics. He has interned as a data scientist, program manager, and software engineer at established firms like Microsoft and Boston Consulting Group and dynamic startups like QuantCo and Seele. Alan has worked on many industry projects at the intersection of data science and engineering, including client cases in pricing and personalization. At Cal, Alan leads a 20-student team at CDSS in external data science education.</p>
-
-                </div>
-
-            </div>
-
-            <div class="bio-container">
-
-                <div class="headshot-container">
-                    <img src="assets/images/headshots/andrei.jpg" alt="Andrei Caprau" class="headshot" />
-                </div>
-
-                <div class="bio-text-container">
-
-                    <h3>Andrei Caprau</h3>
-
-                    <p>Andrei is a senior completing a triple major in data science, economics, and CS. Interested in the intersection and applications of these fields, he has worked on industry and academic projects including modeling and forecasting job openings and growth, building a predictive model for Berkeley administrators to classify students at risk of not declaring a major on-time, and analyzing data for economics research projects involving trade and tax policy. Additionally, he taught Berkeley’s largest econometrics class as an undergraduate instructor.</p>
-
-                </div>
 
             </div>
             
         </div>
 
-        </div>
-
     </body>
+
+    <script type="text/javascript" src="assets/slick/slick.min.js"></script>
 
     <script>
         $("[id$=-down-arrow]").hide().fadeIn(2000);
@@ -165,6 +173,5 @@
                 }, 1000);
             });
         });
-        
     </script>
 </html>
