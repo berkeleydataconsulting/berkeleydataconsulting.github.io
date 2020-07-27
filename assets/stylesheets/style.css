@@ -30,6 +30,12 @@ div.fullscreen-container#logo-container {
 div#background div.main-content {
   margin-top: 7%; }
 
+a:link, a:visited {
+  color: #aaa;
+  text-decoration: none; }
+a:hover {
+  text-decoration: underline; }
+
 div.down-arrow-container {
   /* keeps down arrows at the bottom center of their parent */
   margin: 0 auto 20px auto;
@@ -151,9 +157,9 @@ form#contact-form {
     -o-transition: background 0.3s ease, color 0.3s ease;
     transition: background 0.3s ease, color 0.3s ease; }
   form#contact-form button[type="submit"]:hover {
-    background: #eee;
+    background: #fefefe;
     color: #000; }
-  form#contact-form button[type="submit"] {
+  form#contact-form:invalid button[type="submit"] {
     background: #eee;
     color: #bbb;
     pointer-events: disabled;

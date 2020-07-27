@@ -41,6 +41,17 @@ div#background div.main-content {
     margin-top: 7%;
 }
 
+a {
+    &:link, &:visited {
+        color: #aaa;
+        text-decoration: none;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 div.down-arrow-container {
     /* keeps down arrows at the bottom center of their parent */
     margin: 0 auto 20px auto;
@@ -202,8 +213,8 @@ form#contact-form {
         width: 200px;
         height: 60px;
         margin-top: 15px;
-        background: #000;
-        color: rgb(254, 254, 254);
+        background: $oddColor;
+        color: $evenColor;
         font-size: 20px;
         cursor: pointer;
         -webkit-ransition: background 0.3s ease, color 0.3s ease;
@@ -213,47 +224,14 @@ form#contact-form {
     }
 
     button[type="submit"]:hover {
-        background: #eee;
-        color: #000;
+        background: $evenColor;
+        color: $oddColor;
     }
 
-    button[type="submit"] {
+    &:invalid button[type="submit"] {
         background: #eee;
         color: #bbb;
         pointer-events: disabled;
         cursor: default;
     }
 }
-
-
-
-// form#contact-form input,
-// form#contact-form textarea {
-    
-// }
-
-// form#contact-form textarea {
-    
-// }
-
-// form#contact-form table td {
-    
-// }
-
-// form#contact-form table td label {
-    
-// }
-
-// form#contact-form 
-
-// form#contact-form 
-
-// form#contact-form:invalid 
-
-// /* form#contact-form table {
-//     width: 30%;
-// } */
-
-// /* form#contact-form label {
-//     width: 100%;
-// } */
