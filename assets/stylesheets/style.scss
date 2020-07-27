@@ -57,20 +57,43 @@ div.down-arrow-container {
     margin: 0 auto 20px auto;
     align-self: center;
     display: inline-flex;
+
+    i.down-arrow {
+        opacity: 0.3;
+        /* display: inline-flex; */
+        bottom: 0;
+        cursor: pointer;
+    
+        :hover {
+            opacity: 1;
+        }
+    
+        svg {
+            margin: 0 auto;
+        }
+    }
 }
 
-i.down-arrow {
-    opacity: 0.3;
-    /* display: inline-flex; */
+div.up-arrow-container {
+    position: fixed;
+    right: 10px;
     bottom: 0;
-    cursor: pointer;
+    // display: none;
 
-    :hover {
-        opacity: 1;
+    button#to-top {
+        border: none;
+        min-width: 0;
+        min-height: 0;
+        background-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
     }
 
-    svg {
-        margin: 0 auto;
+    i.up-arrow {
+        fill: #aaa
     }
 }
 
