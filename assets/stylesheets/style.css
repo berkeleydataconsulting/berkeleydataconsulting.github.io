@@ -184,6 +184,11 @@ form#contact-form textarea {
     margin: 15px 0;
 }
 
+form#contact-form textarea {
+    resize: none;
+    height: 250px;
+}
+
 form#contact-form table td {
     display: flex;
     flex-direction: column;
