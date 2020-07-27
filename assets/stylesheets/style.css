@@ -98,7 +98,7 @@ div.fullscreen-container h1, div.fullscreen-container h2 {
   font-family: 'Noto Sans JP', 'Public Sans', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   letter-spacing: 3px; }
 div.fullscreen-container h1 {
-  font-size: 55px;
+  font-size: 35px;
   margin-bottom: 60px; }
 div.fullscreen-container h2 {
   font-size: 40px;
@@ -107,6 +107,11 @@ div.fullscreen-container h2 {
 div.fullscreen-container p.paragraph {
   font-size: 20px;
   font-weight: 200; }
+div.fullscreen-container i.dots svg {
+  width: 75px;
+  height: 75px;
+  margin: 10px auto;
+  display: block; }
 
 /* Bios */
 div.biographies-container {
