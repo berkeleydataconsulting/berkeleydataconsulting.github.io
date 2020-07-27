@@ -26,7 +26,8 @@ body::-webkit-scrollbar { /* WebKit */
     justify-content: center;
 }
 
-div.fullscreen-container#background {
+div.fullscreen-container#background,
+div.fullscreen-container#logo-container {
     justify-content: space-between;
 }
 
