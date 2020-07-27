@@ -1,0 +1,259 @@
+/*
+    Berkeley Data Consulting Website Styles
+    by Chris Pyles
+*/
+
+$oddColor: #000;
+$evenColor: rgb(254, 254, 254);
+
+* {
+    font-family: 'Public Sans', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 0;
+
+    // Hide Scrollbar
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+    ::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
+.fullscreen-container {
+    min-height: 100vh; 
+    width: 100%;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+}
+
+div.fullscreen-container#background,
+div.fullscreen-container#logo-container {
+    justify-content: space-between;
+}
+
+div#background div.main-content {
+    margin-top: 7%;
+}
+
+div.down-arrow-container {
+    /* keeps down arrows at the bottom center of their parent */
+    margin: 0 auto 20px auto;
+    align-self: center;
+    display: inline-flex;
+}
+
+i.down-arrow {
+    opacity: 0.3;
+    /* display: inline-flex; */
+    bottom: 0;
+    cursor: pointer;
+
+    :hover {
+        opacity: 1;
+    }
+
+    svg {
+        margin: 0 auto;
+    }
+}
+
+div#logo-container {
+    background-color: #000;
+    align-items: center;
+}
+
+div.main-container:nth-of-type(2n) {
+    background-color: $evenColor;
+    color: $oddColor;
+
+    i.down-arrow {
+        fill: $oddColor;
+    }
+}
+
+div.main-container:nth-of-type(2n+1) {
+    background-color: $oddColor;
+    color: $evenColor;
+
+    i.down-arrow {
+        fill: $evenColor;
+    }
+}
+
+img#logo {
+    margin: auto auto;
+    width: 700px;
+    display: block;
+}
+
+div.fullscreen-container {
+    p, h1, h2, h3 {
+        margin: 30px 20%;
+    }
+
+    h1, h2 {
+        text-align: center;
+        font-weight: 300;
+        font-family: 'Noto Sans JP', 'Public Sans', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        letter-spacing: 3px;
+    }
+
+    h1 {
+        font-size: 55px;
+        margin-bottom: 60px;
+    }
+
+    h2 {
+        font-size: 40px;
+        margin-bottom: 10px;
+        margin-top: 50px;
+    }
+
+    p.paragraph {
+        font-size: 20px;
+        font-weight: 200;
+    }
+}
+
+/* Bios */
+
+div.biographies-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    div.bio-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 60vw;
+        margin: 2% auto;
+
+        p, h3 {
+            margin: 0;
+        }
+
+        div.bio-text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 40px;
+
+            p {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+
+        img.headshot {
+            width: 200px;
+            border-radius: 50%;
+        }
+    }
+}
+
+/* Contact Form */
+
+form#contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 20%;
+
+    input:focus, textarea:focus, button:focus {
+        outline: none;
+    }
+
+    input, textarea {
+        width: 500px;
+        font-size: 20px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid #000;
+        margin: 15px 0;
+    }
+
+    textarea {
+        resize: none;
+        height: 250px;
+    }
+
+    table td {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            text-align: right;
+            font-style: italic;
+            color: #444;
+        }
+    }
+
+    button[type="submit"] {
+        border: none;
+        width: 200px;
+        height: 60px;
+        margin-top: 15px;
+        background: #000;
+        color: rgb(254, 254, 254);
+        font-size: 20px;
+        cursor: pointer;
+        -webkit-ransition: background 0.3s ease, color 0.3s ease;
+        -moz-transition: background 0.3s ease, color 0.3s ease;
+        -o-transition: background 0.3s ease, color 0.3s ease;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+        background: #eee;
+        color: #000;
+    }
+
+    button[type="submit"] {
+        background: #eee;
+        color: #bbb;
+        pointer-events: disabled;
+        cursor: default;
+    }
+}
+
+
+
+// form#contact-form input,
+// form#contact-form textarea {
+    
+// }
+
+// form#contact-form textarea {
+    
+// }
+
+// form#contact-form table td {
+    
+// }
+
+// form#contact-form table td label {
+    
+// }
+
+// form#contact-form 
+
+// form#contact-form 
+
+// form#contact-form:invalid 
+
+// /* form#contact-form table {
+//     width: 30%;
+// } */
+
+// /* form#contact-form label {
+//     width: 100%;
+// } */

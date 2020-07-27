@@ -1,237 +1,162 @@
+/*
+    Berkeley Data Consulting Website Styles
+    by Chris Pyles
+*/
 * {
-    font-family: 'Public Sans', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-}
+  font-family: 'Public Sans', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; }
 
 body {
-    margin: 0;
-}
-
-/* Hide scrollbar */
-body {
-    overflow-y: scroll;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-}
-
-body::-webkit-scrollbar { /* WebKit */
+  margin: 0;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */ }
+  body ::-webkit-scrollbar {
     width: 0;
-    height: 0;
-}
+    height: 0; }
 
 .fullscreen-container {
-    min-height: 100vh; 
-    width: 100%;
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center;
-}
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 div.fullscreen-container#background,
 div.fullscreen-container#logo-container {
-    justify-content: space-between;
-}
+  justify-content: space-between; }
 
 div#background div.main-content {
-    margin-top: 7%;
-}
+  margin-top: 7%; }
 
 div.down-arrow-container {
-    /* keeps down arrows at the bottom center of their parent */
-    margin: 0 auto 20px auto;
-    /* justify-self: flex-end; */
-    align-self: center;
-    display: inline-flex;
-}
-
-div.main-container:nth-of-type(2n+1) i.down-arrow svg {
-    fill: #fff;
-    margin: 0 auto;
-}
-
-div.main-container:nth-of-type(2n) i.down-arrow svg {
-    fill: #000;
-    margin: 0 auto;
-}
+  /* keeps down arrows at the bottom center of their parent */
+  margin: 0 auto 20px auto;
+  align-self: center;
+  display: inline-flex; }
 
 i.down-arrow {
-    opacity: 0.3;
-    /* display: inline-flex; */
-    bottom: 0;
-    cursor: pointer;
-}
-
-i.down-arrow:hover {
-    opacity: 1;
-}
+  opacity: 0.3;
+  /* display: inline-flex; */
+  bottom: 0;
+  cursor: pointer; }
+  i.down-arrow :hover {
+    opacity: 1; }
+  i.down-arrow svg {
+    margin: 0 auto; }
 
 div#logo-container {
-    background-color: #000;
-    align-items: center;
-}
+  background-color: #000;
+  align-items: center; }
 
 div.main-container:nth-of-type(2n) {
-    background-color: rgb(254, 254, 254);
-    color: #000;
-}
+  background-color: #fefefe;
+  color: #000; }
+  div.main-container:nth-of-type(2n) i.down-arrow {
+    fill: #000; }
 
 div.main-container:nth-of-type(2n+1) {
-    background-color: #000;
-    color: #fff;
-}
+  background-color: #000;
+  color: #fefefe; }
+  div.main-container:nth-of-type(2n+1) i.down-arrow {
+    fill: #fefefe; }
 
 img#logo {
-    margin: auto auto;
-    width: 700px;
-    display: block;
-}
+  margin: auto auto;
+  width: 700px;
+  display: block; }
 
-div.fullscreen-container p, 
-div.fullscreen-container h1,
-div.fullscreen-container h2,
-div.fullscreen-container h3 {
-    margin: 30px 20%;
-}
-
-div.fullscreen-container h1,
-div.fullscreen-container h2 {
-    text-align: center;
-    font-weight: 300;
-    font-family: 'Noto Sans JP', 'Public Sans', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-    letter-spacing: 3px;
-}
-
+div.fullscreen-container p, div.fullscreen-container h1, div.fullscreen-container h2, div.fullscreen-container h3 {
+  margin: 30px 20%; }
+div.fullscreen-container h1, div.fullscreen-container h2 {
+  text-align: center;
+  font-weight: 300;
+  font-family: 'Noto Sans JP', 'Public Sans', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  letter-spacing: 3px; }
 div.fullscreen-container h1 {
-    font-size: 55px;
-    margin-bottom: 60px;
-}
-
+  font-size: 55px;
+  margin-bottom: 60px; }
 div.fullscreen-container h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    margin-top: 50px;
-}
-
-p.paragraph {
-    font-size: 20px;
-    font-weight: 200;
-    /* flex-grow: 1; */
-}
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: 50px; }
+div.fullscreen-container p.paragraph {
+  font-size: 20px;
+  font-weight: 200; }
 
 /* Bios */
-
 div.biographies-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-div.fullscreen-container div.bio-container p,
-div.fullscreen-container div.bio-container h3 {
-    margin: 0;
-}
-
-/* div#bio-carousel {
-    width: 80vw;
-    margin: 0 auto;
-} */
-
-div#bio-carousel div.bio-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  div.biographies-container div.bio-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 60vw;
-    margin: 2% auto;
-}
-
-div.bio-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 40px;
-}
-
-div.bio-text-container p {
-    font-size: 14px;
-    line-height: 20px;
-}
-
-img.headshot {
-    width: 200px;
-    border-radius: 50%;
-}
+    margin: 2% auto; }
+    div.biographies-container div.bio-container p, div.biographies-container div.bio-container h3 {
+      margin: 0; }
+    div.biographies-container div.bio-container div.bio-text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 40px; }
+      div.biographies-container div.bio-container div.bio-text-container p {
+        font-size: 14px;
+        line-height: 20px; }
+    div.biographies-container div.bio-container img.headshot {
+      width: 200px;
+      border-radius: 50%; }
 
 /* Contact Form */
-
 form#contact-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 20%;
-}
-
-input:focus, textarea:focus, button:focus {
-    outline: none;
-}
-
-form#contact-form input,
-form#contact-form textarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 20%; }
+  form#contact-form input:focus, form#contact-form textarea:focus, form#contact-form button:focus {
+    outline: none; }
+  form#contact-form input, form#contact-form textarea {
     width: 500px;
     font-size: 20px;
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: 2px solid #000;
-    margin: 15px 0;
-}
-
-form#contact-form textarea {
+    margin: 15px 0; }
+  form#contact-form textarea {
     resize: none;
-    height: 250px;
-}
-
-form#contact-form table td {
+    height: 250px; }
+  form#contact-form table td {
     display: flex;
-    flex-direction: column;
-}
-
-form#contact-form table td label {
-    text-align: right;
-    font-style: italic;
-    color: #444
-}
-
-form#contact-form button[type="submit"] {
+    flex-direction: column; }
+    form#contact-form table td label {
+      text-align: right;
+      font-style: italic;
+      color: #444; }
+  form#contact-form button[type="submit"] {
     border: none;
     width: 200px;
     height: 60px;
     margin-top: 15px;
     background: #000;
-    color: rgb(254, 254, 254);
+    color: #fefefe;
     font-size: 20px;
     cursor: pointer;
     -webkit-ransition: background 0.3s ease, color 0.3s ease;
     -moz-transition: background 0.3s ease, color 0.3s ease;
     -o-transition: background 0.3s ease, color 0.3s ease;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-form#contact-form button[type="submit"]:hover {
+    transition: background 0.3s ease, color 0.3s ease; }
+  form#contact-form button[type="submit"]:hover {
     background: #eee;
-    color: #000;
-}
-
-form#contact-form:invalid button[type="submit"] {
+    color: #000; }
+  form#contact-form button[type="submit"] {
     background: #eee;
     color: #bbb;
     pointer-events: disabled;
-    cursor: default;
-}
+    cursor: default; }
 
-/* form#contact-form table {
-    width: 30%;
-} */
-
-/* form#contact-form label {
-    width: 100%;
-} */
+/*# sourceMappingURL=style.css.map */
