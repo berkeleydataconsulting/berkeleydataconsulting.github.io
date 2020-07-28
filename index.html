@@ -215,6 +215,14 @@
                 </table>
 
                 <button type="submit" id="contact-form-submit">Submit</button>
+
+                <div id="success-message">
+                    <h4>Thank you for contacting us! We'll respond to your inquiry shortly.</h4>
+                </div>
+
+                <div id="failure-message">
+                    <h4>Unforunately, we were unable to submit your form. Please try again or email us at _.</h4>
+                </div>
             
             </form>
 
@@ -242,6 +250,9 @@
             });
         });
 
+        $("#success-message").hide();
+        $("#failure-message").hide();
+
         $("button#to-top").hide();
         $(window).scroll(() => {
             if ($(this).scrollTop()) {
@@ -257,6 +268,11 @@
 
         var $form = $("form#contact-form");
         var url = 'https://script.google.com/macros/s/AKfycbwnkwfcuheOpUP1781-AJMVFp1scuz4pxRfQBe3Vb60LbmZVMP4/exec';
+
+        $(document).ajaxSuccess(() => {
+            console.log(`Sent form:\n${$form.serialize()}`);
+        });
+        
         $("#contact-form-submit").on("click", (e) => {
             if ($("#contact-form").valid()) {
                 e.preventDefault();
@@ -265,12 +281,15 @@
                     method: "GET",
                     dataType: "json",
                     data: $form.serialize(),
-                    global: true
+                    global: true,
+                    error: (jqxhr, error) => {
+                        console.log(`Error sending form:\n${$form.serialize()}\n${error}`);
+                        $("#failure-message").show();
+                    }
                 });
-                $(document).ajaxSuccess(() => {
-                    console.log(`Sent form:\n${$form.serialize()}`)
-                });
+                $("#success-message").show();
             }
         })
+
     </script>
 </html>
