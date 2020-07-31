@@ -43,7 +43,7 @@ div#background div.main-content {
 
 a {
     &:link, &:visited {
-        color: #aaa;
+        color: $evenColor;
         text-decoration: none;
     }
 
@@ -184,6 +184,11 @@ div.biographies-container {
 
         p, h3 {
             margin: 0;
+        }
+
+        h3 i.linkedin-icon {
+            margin-left: 10px;
+            color: $evenColor;
         }
 
         div.bio-text-container {

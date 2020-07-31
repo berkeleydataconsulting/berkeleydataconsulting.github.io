@@ -31,7 +31,7 @@ div#background div.main-content {
   margin-top: 7%; }
 
 a:link, a:visited {
-  color: #aaa;
+  color: #fefefe;
   text-decoration: none; }
 a:hover {
   text-decoration: underline; }
@@ -126,6 +126,9 @@ div.biographies-container {
     margin: 2% auto; }
     div.biographies-container div.bio-container p, div.biographies-container div.bio-container h3 {
       margin: 0; }
+    div.biographies-container div.bio-container h3 i.linkedin-icon {
+      margin-left: 10px;
+      color: #fefefe; }
     div.biographies-container div.bio-container div.bio-text-container {
       display: flex;
       flex-direction: column;
