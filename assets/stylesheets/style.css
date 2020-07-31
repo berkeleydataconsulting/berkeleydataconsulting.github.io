@@ -136,6 +136,7 @@ div.biographies-container {
         line-height: 20px; }
     div.biographies-container div.bio-container img.headshot {
       width: 200px;
+      height: 200px;
       border-radius: 50%; }
 
 /* Contact Form */
