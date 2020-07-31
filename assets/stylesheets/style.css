@@ -30,12 +30,6 @@ div.fullscreen-container#logo-container {
 div#background div.main-content {
   margin-top: 7%; }
 
-a:link, a:visited {
-  color: #fefefe;
-  text-decoration: none; }
-a:hover {
-  text-decoration: underline; }
-
 div.down-arrow-container {
   /* keeps down arrows at the bottom center of their parent */
   margin: 0 auto 20px auto;
@@ -78,12 +72,22 @@ div.main-container:nth-of-type(2n) {
   color: #000; }
   div.main-container:nth-of-type(2n) i.down-arrow {
     fill: #000; }
+  div.main-container:nth-of-type(2n) a:link, div.main-container:nth-of-type(2n) a:visited {
+    color: #000;
+    text-decoration: none; }
+  div.main-container:nth-of-type(2n) a:hover {
+    text-decoration: underline; }
 
 div.main-container:nth-of-type(2n+1) {
   background-color: #000;
   color: #fefefe; }
   div.main-container:nth-of-type(2n+1) i.down-arrow {
     fill: #fefefe; }
+  div.main-container:nth-of-type(2n+1) a:link, div.main-container:nth-of-type(2n+1) a:visited {
+    color: #fefefe;
+    text-decoration: none; }
+  div.main-container:nth-of-type(2n+1) a:hover {
+    text-decoration: underline; }
 
 img#logo {
   margin: auto auto;
@@ -107,11 +111,18 @@ div.fullscreen-container h2 {
 div.fullscreen-container p.paragraph {
   font-size: 20px;
   font-weight: 200; }
+  div.fullscreen-container p.paragraph#contact-email {
+    text-align: center; }
 div.fullscreen-container i.dots svg {
   width: 75px;
   height: 75px;
   margin: 10px auto;
   display: block; }
+div.fullscreen-container#contact-form-container i.dots svg {
+  margin-top: -150px;
+  margin-bottom: 0; }
+div.fullscreen-container#contact-form-container h2 {
+  margin-top: 25px; }
 
 /* Bios */
 div.biographies-container {
@@ -135,7 +146,7 @@ div.biographies-container {
       justify-content: center;
       margin-left: 40px; }
       div.biographies-container div.bio-container div.bio-text-container p {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 20px; }
     div.biographies-container div.bio-container img.headshot {
       width: 200px;
