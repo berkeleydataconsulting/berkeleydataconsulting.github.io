@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173594867-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-173594867-1');
+        </script>
+
+        <meta charset="utf-8">
+
+        <title>Berkeley Data Conulting</title>
+        <meta name="description" content="Berkeley Data Consulting leverages a powerful combination of data science, economics, and engineering to deliver scalable data-driven insights that power business decisions.">
+        <meta name="keywords" content>
+
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&family=Public+Sans:wght@200;300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/stylesheets/style.css">
+        <link rel="icon" type="image/png" href="assets/images/favicon.png">
+        
+        <script type="text/javascript" src="assets/javascript/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/jquery.validate.min.js"></script>
+        
+    </head>
+
+    <body id="top">
+
+        <div style="margin: 20px 0 100px 20px;">
+            <form>
+
+                <input type="text" name="name" placeholder="Name" id="name-input">
+
+            </form>
+        </div>
+        
+        <div>
+
+            <table id="output">
+                <tr>
+                    <td style="padding-right: 10px;"><img src="https://berkeleydataconsulting.com/assets/images/dots.svg" alt="Berkeley Data Consulting" width="100" height="100"></td>
+                    <td>
+                        <p style="margin: auto auto;">
+                        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&family=Public+Sans:wght@200;300;400;700&display=swap" rel="stylesheet">
+                        <span id="name" style="font-size: 20px; font-weight: 600; line-height: 30px;"></span><br>
+                        <span id="" style="font-size: 14px;">Berkeley Data Consulting</span><br>
+                        <span id="" style="font-size: 14px;"><a href="mailto:info@berkeleydataconsulting.com" style="color: #444;">info@berkeleydataconsulting.com</a></span><br>
+                        <span id="" style="font-size: 14px;"><a href="https://berkeleydataconsulting.com/" style="color: #444;">berkeleydataconsulting.com</a></span><br>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div>
+            <button id="copy-btn">Copy</button>
+        </div>
+
+    </body>
+
+    <script>
+
+        $("#name-input").on("keyup", () => {
+            $("#name").text($("#name-input").val());
+        })
+
+        const copyEl = (elToBeCopied) => {
+            let range, sel;
+            
+            // Ensure that range and selection are supported by the browsers
+            if (document.createRange && window.getSelection) {
+                
+                range = document.createRange();
+                sel = window.getSelection();
+                // unselect any element in the page
+                sel.removeAllRanges();
+
+                try {
+                range.selectNodeContents(elToBeCopied);
+                sel.addRange(range);
+                } catch (e) {
+                range.selectNode(elToBeCopied);
+                sel.addRange(range);
+                }
+
+                document.execCommand('copy');
+            }
+
+            sel.removeAllRanges();
+
+            console.log('Element Copied! Paste it in a file')
+        };
+
+        $("#copy-btn").on("click", () => {
+            copyEl(document.querySelector("#output"));
+        })
+        
+    </script>
+</html>
